@@ -21,6 +21,7 @@ class MyApplication extends StatelessWidget {
         ),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50.0,
@@ -42,27 +43,29 @@ class MyApplication extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
               ),
+              SizedBox(
+                height: 15.0,
+                width: 100.0,
+                child: Divider(
+                  color: Colors.white,
+                ),
+              ),
               Card(
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.phone,
-                        color: Colors.green,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text('+49 151 6658332X',
+                  padding: const EdgeInsets.all(10.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.green,
+                    ),
+                    title: Text('+49 151 6658332X',
                       style: TextStyle(
                         fontSize: 20.0,
                         color: Colors.green,
                       ),
-                      )
-                    ],
+                    ),
                   ),
                 ),
               ),
@@ -70,7 +73,7 @@ class MyApplication extends StatelessWidget {
                 color: Colors.white,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: ListTile(
                     leading: Icon(
                       Icons.mail_outline,
